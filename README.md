@@ -1,6 +1,6 @@
 # pytorch-test
 
-Experimenting with (Conda)[https://docs.conda.io/en/latest/] to create
+Experimenting with [Conda](https://docs.conda.io/en/latest/) to create
 Docker containers running PyTorch.
 
 ## Prerequisites
@@ -36,7 +36,8 @@ $ make cache
 2. Create pytorch image. This image contains two environments:
 `pytorch` with the regular CPU build, and `pytorch-cuda` containing a
 build for Nvidia GPUs.
-``` $ make pytorch
+```
+$ make pytorch
 ```
 
 3. Test CUDA image.
