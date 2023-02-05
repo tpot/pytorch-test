@@ -1,6 +1,9 @@
-FROM continuumio/miniconda3
+FROM cache
 
-RUN conda update conda
-
+# CPU build
 COPY pytorch.yml .
 RUN conda env create -f pytorch.yml
+
+# CUDA (GPU) build
+COPY pytorch-cuda.yml .
+RUN conda env create -f pytorch-cuda.yml

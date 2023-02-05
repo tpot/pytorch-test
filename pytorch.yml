@@ -3,5 +3,7 @@ channels:
   - conda-forge
   - pytorch
 dependencies:
-  - python
-  - pytorch
+  - python==3.10.9
+  - pytorch==1.13.1
+  - torchaudio
+  - torchvision

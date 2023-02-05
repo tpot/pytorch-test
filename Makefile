@@ -1,10 +1,10 @@
-build: pytorch pytorch-cuda
+build: cache pytorch
+
+cache:
+	docker build -t cache -f Dockerfile.cache .
 
 pytorch:
 	docker build -t pytorch -f Dockerfile.pytorch .
 
-pytorch-cuda:
-	docker build -t pytorch-cuda -f Dockerfile.pytorch-cuda .
-
 run:
-	docker run --gpus all --rm -it pytorch-cuda
+	docker run --gpus all --rm -it pytorch

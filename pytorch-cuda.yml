@@ -4,8 +4,8 @@ channels:
   - pytorch
   - nvidia
 dependencies:
-  - python
-  - pytorch
+  - python==3.10.9
+  - pytorch==1.13.1=*cuda*
+  - pytorch-cuda=11.6
   - torchaudio
   - torchvision
-  - pytorch-cuda=11.6

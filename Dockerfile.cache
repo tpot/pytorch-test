@@ -1,0 +1,12 @@
+FROM continuumio/miniconda3
+
+ARG PYTHON_VERSION=3.10
+ARG TORCH_VERSION=1.13.1
+
+RUN conda install --download-only \
+  -c pytorch \
+  python=$PYTHON_VERSION pytorch=$TORCH_VERSION torchvision torchaudio
+
+RUN conda install --download-only \
+  -c pytorch -c nvidia \
+  pytorch=$TORCH_VERSION=*cuda* 
