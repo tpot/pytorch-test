@@ -1,0 +1,11 @@
+name: pytorch-cuda
+channels:
+  - conda-forge
+  - pytorch
+  - nvidia
+dependencies:
+  - python
+  - pytorch
+  - torchaudio
+  - torchvision
+  - pytorch-cuda=11.6
